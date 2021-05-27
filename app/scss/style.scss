@@ -6,7 +6,7 @@
 
 .menu {
   width: 72px;
-  height: 100%;
+  // height: 100%;
   padding-top: 86px;
   background-color: #C4C4C4;
   display: flex;
@@ -132,7 +132,112 @@
 
 }
 
-.main {
+.info {
   max-width: 1006px;
-  padding: 40px 24px 0;
+  padding: 40px 24px 54px;
+}
+
+.profile {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #BDBDBD;
+  margin-bottom: 38px;
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  &__img {
+    display: block;
+    width: 135px;
+    height: 135px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-right: 88px;
+  }
+  &__text {
+    font-size: 20px;
+    line-height: 25px;
+    color: $black;
+    margin-bottom: 30px;
+    padding-left: 23px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-image: url("../images/exclamation.svg");
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+  &__btn {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 68px;
+    padding-right: 45px;
+    background-color: transparent;
+    @extend %roboto-300;
+    cursor: pointer;
+    border: 1px solid #C4C4C4;
+    border-radius: 6px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-image: url("../images/download.svg");
+      top: 50%;
+      left: 45px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__form-box {
+    display: flex;
+    .profile__form-input {
+      width: 467px;
+    }
+    .profile__form-label {
+      margin-right: 24px;
+    }
+  }
+  
+  &__form-input,
+  &__form-textarea {
+    width: 100%;
+    height: 39px;
+    border: 1px solid #C4C4C4;
+    border-radius: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 16px;
+    &::placeholder {
+      @extend %roboto-400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #C4C4C4;
+    }
+  }
+  &__form-link {
+    display: inline-block;
+    margin-top: 12px;
+    margin-bottom: 17px;
+    font-size: 16px;
+    line-height: 19px;
+    color: $black;
+  }
+  &__form-textarea {
+    padding-top: 10px;
+    padding-left: 24px;
+    height: 120px;
+    resize: none;
+    margin-bottom: 0;
+  }
 }
