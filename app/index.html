@@ -100,8 +100,50 @@
       <div class="contact">
         <h2 class="contact__title title">Контактные даные</h2>
         <form class="contact__form">
-          
+          <p class="contact__form-title input-title">Имя</p>
+          <div class="contact__form-box profile__form-box">
+            <label class="contact__form-label profile__form-label">
+              <select class="contact__form-select">
+                <option value="Россия">Россия</option>
+                <option value="Украина">Украина</option>
+              </select>
+            </label>
+            <label class="contact__form-label profile__form-label">
+              <input class="contact__form-input profile__form-input" type="text" placeholder="Город проживания">
+            </label>
+          </div>
+
+          <div class="contact__form-box profile__form-box">
+            <label class="contact__form-label profile__form-label">
+              <p class="profile__form-title input-title">Эл. адрес</p>
+              <input class="contact__form-input profile__form-input" type="text" placeholder="Введите ваш Email">
+            </label>
+            <label class="contact__form-label profile__form-label">
+              <p class="profile__form-title input-title">Номер телефона</p>
+              <input class="contact__form-input profile__form-input" type="text" placeholder="38 (099) 568 432 3">
+            </label>
+          </div>
+
+          <label class="contact__form-label profile__form-label">
+            <p class="profile__form-title input-title">Личный сайт</p>
+            <input class="contact__form-input profile__form-input" type="text" placeholder="Введите URL">
+          </label>
         </form>
+      </div>
+
+
+      <div class="view">
+        <div class="view__content">
+          <h3 class="view__title">Показать в профиле</h3>
+          <p class="view__text">Ваши контактные даные будут отображаться в Вашем профиле.</p>
+        </div>
+        <form class="view__form">
+          <label class="view__form-label">
+            <input class="view__form-input" type="checkbox">
+            <span class="view__form-checkbox"></span>
+          </label>
+        </form>
+
       </div>
 
     </main>

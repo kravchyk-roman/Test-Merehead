@@ -241,3 +241,78 @@
     margin-bottom: 0;
   }
 }
+
+.contact {
+  margin-bottom: 8px;
+  &__title {
+    margin-bottom: 16px;
+  }
+  &__form-select {
+    width: 467px;
+    height: 39px;
+    border: 1px solid #C4C4C4;
+    border-radius: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    
+    option {
+      color: $black;
+    }
+  }
+}
+
+.view {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #BDBDBD;
+  margin-bottom: 38px;
+  &__text {
+    font-size: 12px;
+    line-height: 20px;
+    color: $title;
+    margin-top: 4px;
+  }
+
+  &__form-label {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 30px;
+  }
+  &__form-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  &__form-checkbox {
+    position: absolute;
+    top: 6px;
+    width: 60px;
+    height: 30px;
+    border: 1px solid #C4C4C4;
+    border-radius: 16px;
+    background-color: transparent;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #C4C4C4;
+      transition: all 0.3s linear;
+    }
+  }
+  &__form-input {
+    &:checked+.view__form-checkbox::before {
+      background-color: #000;
+      left: 28px;
+    }
+  }
+
+}
