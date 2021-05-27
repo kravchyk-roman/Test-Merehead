@@ -5,6 +5,7 @@
 
 
 .menu {
+  @extend %inter-500;
   width: 72px;
   // height: 100%;
   padding-top: 86px;
@@ -134,7 +135,7 @@
 
 .info {
   max-width: 1006px;
-  padding: 40px 24px 54px;
+  padding: 40px 24px 54px 24px;
 }
 
 .profile {
@@ -153,9 +154,12 @@
     display: block;
     width: 135px;
     height: 135px;
-    background-color: #eee;
+    // background-color: #eee;
     border-radius: 50%;
     margin-right: 88px;
+    img {
+      width: 100%;
+    }
   }
   &__text {
     font-size: 20px;
@@ -183,6 +187,8 @@
     padding-right: 45px;
     background-color: transparent;
     @extend %roboto-300;
+    font-size: 14px;
+    line-height: 160%;
     cursor: pointer;
     border: 1px solid #C4C4C4;
     border-radius: 6px;
@@ -206,6 +212,9 @@
     }
     .profile__form-label {
       margin-right: 24px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
   
@@ -225,6 +234,9 @@
       color: #C4C4C4;
     }
   }
+  // &__form-input {
+
+  // }
   &__form-link {
     display: inline-block;
     margin-top: 12px;
@@ -254,11 +266,24 @@
     border-radius: 6px;
     padding-left: 16px;
     padding-right: 16px;
-    
-    option {
-      color: $black;
-    }
+    background-color: transparent;
+    color: #C4C4C4;
+    appearance: none;
   }
+
+  .select-arrow {
+    position: relative;
+  }
+  .select-arrow::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 5px;
+    background-image: url("../images/arrow.svg");
+    top: 33%;
+    right: 16px;
+  }
+
 }
 
 .view {
@@ -354,3 +379,6 @@
     border-radius: 5px;
   }
 }
+
+
+@import 'media';

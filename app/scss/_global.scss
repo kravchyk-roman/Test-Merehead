@@ -19,10 +19,6 @@ body {
   display: flex;
 }
 
-.main {
-  max-width: 1006px;
-  padding: 0 24px;
-}
 
 .title {
   @extend %roboto-700;
