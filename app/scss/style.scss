@@ -1,0 +1,138 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+
+.menu {
+  width: 72px;
+  height: 100%;
+  padding-top: 86px;
+  background-color: #C4C4C4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+
+  &__users {
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__media {
+    margin-bottom: 22px;
+  }
+
+  &__user-photo,
+  &__media-item,
+  &__settings-item {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  &__users-item,
+  &__media-item,
+  &__settings-item {
+    margin-bottom: 16px;
+    font-size: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__user-photo,
+  &__user-name {
+    display: block;
+  }
+
+  &__user-name {
+    width: 54px;
+    line-height: 16px;
+  }
+
+  &__user-photo {
+    margin-bottom: 10px;
+  }
+
+  &__user-photo--last {
+    position: relative;
+    // margin-bottom: 10px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-image: url("../images/plus.svg");
+      left: 50%;
+      top: 32%;
+      transform: translateX(-47%);
+    }
+  }
+
+  &__users-item {
+    a {
+      color: #4F4F4F;
+      display: block;
+    }
+  }
+
+  &__media-item--video,
+  &__media-item--calendar,
+  &__media-item--graph,
+  &__settings-item--info,
+  &__settings-item--setting {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-image: url("../images/videocam.svg");
+      left: 50%;
+      top: 30%;
+      transform: translateX(-47%);
+    }
+  }
+
+  &__media-item--video {
+    &::before {
+      width: 22px;
+      height: 18px;
+    }
+  }
+
+  &__media-item--calendar {
+    &::before {
+      background-image: url("../images/calendar.svg");
+    }
+  }
+
+  &__media-item--graph {
+    &::before {
+      background-image: url("../images/graf.svg");
+    }
+  }
+
+  &__settings-item--info {
+    &::before {
+      background-image: url("../images/info.svg");
+    }
+  }
+
+  &__settings-item--setting {
+    &::before {
+      background-image: url("../images/settings.svg");
+    }
+  }
+
+}
+
+.main {
+  max-width: 1006px;
+  padding: 40px 24px 0;
+}

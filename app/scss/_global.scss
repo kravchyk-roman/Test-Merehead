@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @extend %roboto-400;
+}
+
+.container {
+  max-width: 1098px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.container-flex {
+  display: flex;
+}
+
+.main {
+  max-width: 1006px;
+  padding: 0 24px;
+}
